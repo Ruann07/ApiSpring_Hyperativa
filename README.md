@@ -37,4 +37,6 @@ CRYPTO - openssl rand -hex 32
 
 Dentro da pasta 'postman' existe uma collection que pode ser usada para testes.
 
+No MySql crie um banco de dados com o nome "cardsdb".
+
 
