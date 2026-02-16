@@ -35,3 +35,6 @@ JWT - execute openssl rand -base64 32
 
 CRYPTO - openssl rand -hex 32 
 
+Dentro da pasta 'postman' existe uma collection que pode ser usada para testes.
+
+
