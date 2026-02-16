@@ -1,0 +1,187 @@
+{
+  "info": {
+    "_postman_id": "970268d4-a2a0-41ec-ab9f-619ad1e55887",
+    "name": "API_Test_Hyperativa",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "16677064",
+    "_collection_link": "https://go.postman.co/collection/16677064-970268d4-a2a0-41ec-ab9f-619ad1e55887?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "busca de cartões",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJydWFubiIsImlhdCI6MTc3MTE5NzIxNSwiZXhwIjoxNzcxMjAwODE1fQ.zuZb0JhXz4DoP_VBHPjMwPSALPUtAo6C2-1Oe7iq-pM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"number\": \"1234567890123919\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/cards/search",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cards",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login e geração de token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"ruann\",\n  \"password\": \"123456\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registrar usuario para fazer login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"ruann\",\n  \"password\": \"123456\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar Cartão",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJydWFubiIsImlhdCI6MTc3MTE5NzIxNSwiZXhwIjoxNzcxMjAwODE1fQ.zuZb0JhXz4DoP_VBHPjMwPSALPUtAo6C2-1Oe7iq-pM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"number\": \"1234567890123919\",\n  \"holderName\": \"Ruann\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/cards",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cards"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar Cartões com TXT",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJydWFubiIsImlhdCI6MTc3MTE5NzIxNSwiZXhwIjoxNzcxMjAwODE1fQ.zuZb0JhXz4DoP_VBHPjMwPSALPUtAo6C2-1Oe7iq-pM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "fileCards",
+              "type": "file",
+              "uuid": "818bfb47-da30-4322-907e-36c0d23a2045",
+              "src": "/Users/ruannlima/Documents/cards.txt"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/cards/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cards",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
