@@ -1,7 +1,7 @@
 crypto:
   secret: 78510a96ed67ef57766c35da4c2848edcc2b06cb5836c4c9ef4aa650b184df3e
 jwt:
-  secret: ${JWT_SECRET}
+  secret: dBngR18q+t8Lp7mK8fqChRwKyofAArqg7IdUvsDK9RI=
   expiration: 3600000
 spring:
   datasource:
